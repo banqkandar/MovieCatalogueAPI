@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/poster_home" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin12"
+                android:text="@string/judul_movies_home"
+                android:layout_marginStart="24dp"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-thin"
+                android:textColor="@color/putih"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/movies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_alignParentEnd="true"
+                android:text="@string/lihat_movies"
+                android:layout_marginEnd="@dimen/margin12"
+                android:textColor="@color/abu_gelap"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_movies"
+                android:layout_marginStart="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                tools:listitem="@layout/list_movies"
+                android:layout_marginBottom="@dimen/margin8"
+                tools:itemCount="10" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

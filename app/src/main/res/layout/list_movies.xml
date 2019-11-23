@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="125dp"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/margin12"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/item_movie_img"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/poster_alita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textAlignment="center"
+        android:id="@+id/item_movie_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin8"
+        android:text="@string/judul_item_movies"
+        android:textColor="@color/putih"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_movie_img" />
+</androidx.constraintlayout.widget.ConstraintLayout>
