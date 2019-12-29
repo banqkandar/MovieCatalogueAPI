@@ -14,8 +14,9 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="275dp"
+            android:contentDescription="@string/posterfilm"
             android:scaleType="centerCrop"
-            android:src="@drawable/poster_home" />
+            android:src="@drawable/poster_avenger" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -25,36 +26,36 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin12"
-                android:text="@string/judul_movies_home"
                 android:layout_marginStart="24dp"
-                android:textSize="16sp"
+                android:layout_marginBottom="@dimen/margin12"
                 android:fontFamily="sans-serif-thin"
+                android:text="@string/judul_movies_home"
                 android:textColor="@color/putih"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/movies"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
                 android:layout_alignParentEnd="true"
-                android:text="@string/lihat_movies"
+                android:layout_gravity="end"
                 android:layout_marginEnd="@dimen/margin12"
-                android:textColor="@color/abu_gelap"
                 android:fontFamily="sans-serif"
+                android:text="@string/lihat_movies"
+                android:textColor="@color/abu_gelap"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/list_movies"
-                android:layout_marginStart="24dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="30dp"
-                tools:listitem="@layout/list_movies"
                 android:layout_marginBottom="@dimen/margin8"
-                tools:itemCount="10" />
+                tools:itemCount="10"
+                tools:listitem="@layout/list_movies" />
         </RelativeLayout>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

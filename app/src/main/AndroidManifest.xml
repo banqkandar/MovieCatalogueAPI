@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bangkandar.moviecatalogue">
+    package="com.bangkandar.moviecatalogueapi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".HomeActivity"
+            android:name="com.bangkandar.moviecatalogueapi.HomeActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,20 +21,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MovieDetailActivity"
+            android:name="com.bangkandar.moviecatalogueapi.activity.MovieDetailActivity"
             android:label="@string/detail_movies"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName="com.bangkandar.moviecatalogueapi.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity" />
+                android:value="com.bangkandar.moviecatalogueapi.HomeActivity" />
         </activity>
         <activity
-            android:name=".TvShowDetailActivity"
+            android:name="com.bangkandar.moviecatalogueapi.activity.TvShowDetailActivity"
             android:label="@string/tvshow_detail"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName="com.bangkandar.moviecatalogueapi.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity" />
+                android:value="com.bangkandar.moviecatalogueapi.HomeActivity" />
         </activity>
     </application>
 
